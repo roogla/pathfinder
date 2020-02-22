@@ -19,7 +19,7 @@ class GridMatrix:
         return self.rects
 
 
-def find_nine(coord):
+def find_nine(coord, rectal_dict):
     a = coord[0] - 1
     b = coord[1] - 1
     return_list = []
@@ -28,5 +28,7 @@ def find_nine(coord):
             if a + i == coord[0] and b + j == coord[1]:
                 pass
             else:
-                return_list.append([a + i, b + j])
+                for rectal in rectal_dict:
+                    if rectal['coord'] == [a + i, b + j]:
+                        return_list.append(rectal)
     return return_list
