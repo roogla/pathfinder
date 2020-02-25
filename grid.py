@@ -14,7 +14,9 @@ class GridMatrix:
                     'grid': [0 + n * 20, 0 + m * 20, 20, 20],
                     'screen': None,
                     'color': None,
-                    'fill': 1
+                    'fill': 1,
+                    'wall': 0,
+                    'cost': 0
                 })
         return self.rects
 
